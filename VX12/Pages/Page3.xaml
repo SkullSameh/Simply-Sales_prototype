@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VX12.Page3"
+             Title="Sales Rep">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="Blue">
+            <Border HorizontalOptions="Center" Padding="5" BackgroundColor="Black" VerticalOptions="Center">
+                <StackLayout BackgroundColor="White" WidthRequest="350">
+
+
+                    <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" Spacing="15">
+                        <Label Text="Name " FontAttributes="Bold" TextColor="Black" FontSize="22"></Label>
+                        <Border BackgroundColor="Black" Padding="3" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Entry x:Name="UserName" WidthRequest="150" HeightRequest="20" BackgroundColor="WhiteSmoke" TextColor="Black"></Entry>
+                        </Border>
+
+                    </StackLayout>
+
+
+                    <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" Spacing="15">
+                        <Label Text="Last Name " FontAttributes="Bold" TextColor="Black" FontSize="22"></Label>
+                        <Border BackgroundColor="Black" Padding="3" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Entry x:Name="LastName" WidthRequest="150" HeightRequest="20" BackgroundColor="WhiteSmoke" TextColor="Black"></Entry>
+                        </Border>
+
+                    </StackLayout>
+
+                    <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" Spacing="15">
+                        <Label Text="Tel. No. " FontAttributes="Bold" TextColor="Black" FontSize="22"></Label>
+                        <Border BackgroundColor="Black" Padding="3" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Entry x:Name="Tel" WidthRequest="150" HeightRequest="20" BackgroundColor="WhiteSmoke" TextColor="Black"></Entry>
+                        </Border>
+
+                    </StackLayout>
+
+                    <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" Spacing="15">
+                        <Label Text="Main Interset " FontAttributes="Bold" TextColor="Black" FontSize="22" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                    </StackLayout>
+
+                    <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" Spacing="15">
+                        <RadioButton></RadioButton>
+                        <Image Source="ball.jpeg" WidthRequest="25" HeightRequest="25"></Image>
+
+                        <RadioButton></RadioButton>
+                        <Image Source="home.png" WidthRequest="25" HeightRequest="25"></Image>
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Blue" Spacing="15" WidthRequest="350">
+                        <Border BackgroundColor="Black" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Button x:Name="Add" WidthRequest="100" HeightRequest="50" Text="ADD" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Clicked"></Button>
+                        </Border>
+                    </StackLayout>
+
+
+
+                    <Border HorizontalOptions="Center" Padding="5" BackgroundColor="Black" VerticalOptions="Center">
+                        <StackLayout BackgroundColor="White">
+
+                            <Label Text="Sales Rep_List " FontAttributes="Bold" TextColor="Black" FontSize="22"></Label>
+
+                            <ListView x:Name="Sales_Rep_List" ItemTapped="Sales_Rep_List_ItemTapped">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <Border BackgroundColor="White" Padding="2">
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" Spacing="7">
+                                                    <Label Text="{Binding S_ID}" FontAttributes="Bold" TextColor="Black" FontSize="22" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                                                    <Label Text="{Binding S_Name}" FontAttributes="Bold" TextColor="Black" FontSize="22" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                                                    <Label Text="{Binding S_L_Name}" FontAttributes="Bold" TextColor="Black" FontSize="22" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                                                    <Label Text="{Binding S_Tel}" FontAttributes="Bold" TextColor="Black" FontSize="22" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                                                </StackLayout>
+                                            </Border>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                    </Border>
+
+
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Blue" Spacing="15" WidthRequest="350">
+                        <Border BackgroundColor="Black" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Button x:Name="Delete" WidthRequest="100" HeightRequest="50" Text="Delete" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Delete_Clicked"></Button>
+                        </Border>
+                    </StackLayout>
+
+
+                </StackLayout>
+            </Border>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

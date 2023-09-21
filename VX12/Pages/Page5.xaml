@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VX12.Page5"
+             Title="Report">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="Green">
+            <Border BackgroundColor="Black" Padding="5" HorizontalOptions="Center">
+                <StackLayout>
+                    <Label Text="Assignment List " FontAttributes="Bold" TextColor="White" FontSize="22" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                    <ListView x:Name="Assignment" ItemTapped="Assignment_ItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Border BackgroundColor="Black" HorizontalOptions="Center">
+                                        <StackLayout Orientation="Horizontal" Spacing="250" BackgroundColor="White" WidthRequest="500">
+                                            <Label Text="{Binding S_Id}" FontSize="22" FontAttributes="Bold" TextColor="Black"></Label>
+                                            <Label Text="{Binding C_Id}" FontSize="22" FontAttributes="Bold" TextColor="Black"></Label>
+                                        </StackLayout>
+                                    </Border>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+
+                    <Border BackgroundColor="Green" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Button x:Name="Delete" WidthRequest="100" HeightRequest="25" Text="Delete" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Delete_Clicked"></Button>
+                    </Border>
+                </StackLayout>
+
+
+            </Border>
+
+
+        </StackLayout>
+
+
+
+    </ScrollView>
+</ContentPage>

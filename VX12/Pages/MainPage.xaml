@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VX12.MainPage" Title="Home">
+
+    <StackLayout BackgroundColor="Green">
+        <Border HorizontalOptions="Center" Padding="5" BackgroundColor="Black" VerticalOptions="Center">
+            <StackLayout BackgroundColor="White" WidthRequest="350" HeightRequest="450">
+
+
+                <StackLayout  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White">
+                    <Label Text=" " FontAttributes="Bold" TextColor="Black" FontSize="22"></Label>
+                    <Label Text=" " FontAttributes="Bold" TextColor="Black" FontSize="22"></Label>
+                    <Label Text=" " FontAttributes="Bold" TextColor="Black" FontSize="22"></Label>
+                    <Label Text=" " FontAttributes="Bold" TextColor="Black" FontSize="22"></Label>
+                    <Label Text=" " FontAttributes="Bold" TextColor="Black" FontSize="22"></Label>
+                    <Label Text=" " FontAttributes="Bold" TextColor="Black" FontSize="22"></Label>
+                    <Label Text="Simply Sales " FontAttributes="Bold" TextColor="Black" FontSize="22"></Label>
+
+                </StackLayout>
+
+
+            </StackLayout>
+        </Border>
+
+        <Label Text="Abelrahman_prototype " FontAttributes="Bold" TextColor="Black" FontSize="22" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+    </StackLayout>
+</ContentPage>

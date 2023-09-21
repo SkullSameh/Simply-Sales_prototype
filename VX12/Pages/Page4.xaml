@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VX12.Page4"
+             Title="Assign">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="Orange">
+            <Border BackgroundColor="Black" Padding="5" HorizontalOptions="Center">
+                <StackLayout>
+                    <Label Text="Client_List " FontAttributes="Bold" TextColor="White" FontSize="22"></Label>
+
+                    <ListView x:Name="Client" ItemTapped="Client_ItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Border BackgroundColor="Black" HorizontalOptions="Center">
+                                        <StackLayout Orientation="Horizontal" Spacing="4" BackgroundColor="White" WidthRequest="500">
+                                            <Label Text="{Binding C_ID}" FontSize="22" FontAttributes="Bold" TextColor="Black"></Label>
+                                            <Label Text="{Binding C_Name}" FontSize="22" FontAttributes="Bold" TextColor="Black"></Label>
+                                            <Label Text="{Binding C_L_Name}" FontSize="22" FontAttributes="Bold" TextColor="Black"></Label>
+                                            <Label Text="{Binding C_Tel}" FontSize="22" FontAttributes="Bold" TextColor="Black"></Label>
+                                        </StackLayout>
+                                    </Border>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Border>
+
+
+            <StackLayout HeightRequest="4">
+                <Label Text="   "></Label>
+            </StackLayout>
+
+            <Border BackgroundColor="Black" Padding="5" HorizontalOptions="Center">
+                <StackLayout>
+                    <Label Text="Sales_List " FontAttributes="Bold" TextColor="White" FontSize="22"></Label>
+
+                    <ListView x:Name="SalesL" ItemTapped="SalesL_ItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Border BackgroundColor="Black" HorizontalOptions="Center">
+                                        <StackLayout Orientation="Horizontal" Spacing="4" BackgroundColor="White" WidthRequest="500">
+                                            <Label Text="{Binding S_ID}" FontSize="22" FontAttributes="Bold" TextColor="Black"></Label>
+                                            <Label Text="{Binding S_Name}" FontSize="22" FontAttributes="Bold" TextColor="Black"></Label>
+                                            <Label Text="{Binding S_L_Name}" FontSize="22" FontAttributes="Bold" TextColor="Black"></Label>
+                                            <Label Text="{Binding S_Tel}" FontSize="22" FontAttributes="Bold" TextColor="Black"></Label>
+                                        </StackLayout>
+                                    </Border>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Border>
+
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Orange" WidthRequest="350">
+                <Border BackgroundColor="Black" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Button x:Name="ADD" WidthRequest="100" HeightRequest="50" Text="ADD" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Clicked="ADD_Clicked"></Button>
+                </Border>
+            </StackLayout>
+
+
+        </StackLayout>
+        
+        
+        
+    </ScrollView>
+    
+    
+    
+</ContentPage>
